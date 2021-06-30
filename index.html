@@ -9,33 +9,106 @@
         <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
     </head>
     <body>
+        <!-- Header section -->
         <header class="navigation">
-            <div class="inline-block logo">
+            <div class="logo">
                <img src="images/Latasha_Logo.png" width="70">
                <h2>Latasha Hudson</h2>
             </div>
             <nav class="menu">
-                <div>home</div>
-                <div>about</div>
-                <div>work</div>
-                <div>contact</div>
+                <span>home</span>
+                <span>about</span>
+                <span>work</span>
+                <span>contact</span>
             </nav>
         </header>
-        <section class="heroImg">
-            <div class="image">
-                <img src="images/Latasha.jpg" alt="Latasha Hudson" width="350">
-            </div>
+        <!-- Hero section -->
+        <section class="heroImg">          
             <div class="headline">
                 <h1>Latasha is a Freelance UX Designer with a passion for creating data-driven human experiences</h1>
                 <button type="button">Resume</button>
             </div>
+                <div class="imageLatasha">
+                <img src="images/Latasha.jpg" alt="Latasha Hudson" width="350">
+            </div>  
         </section>
+        <!-- My Skills section coded using CSS flex -->
+        <section class="mySkills">
+            <div class="flexContainer">
+                <div class="flexChild">
+                    <img src="images/User Research.png" alt="User Research" width="130">
+                    <h2>User Research</h2>
+                    <ul>
+                         <li>Research Planning</li>
+                         <li>Surveys</li>
+                         <li>User Interviews</li>
+                         <li>Data Analysis</li>
+                         <li>Usability Testing</li>
+                    </ul>   
+                </div>
+                <div class="flexChild">
+                    <img src="images/UI Design.png" alt="User Interface Design" width="130">
+                    <h2>User Interface Design</h2>
+                    <ul>
+                        <li>Information Architecture</li>
+                        <li>Interaction Design</li>
+                        <li>Wireframes</li>
+                        <li>Prototyping</li>
+                        <li>Scenario Design</li>
+                    </ul>
+                </div>
+                <div class="flexChild">
+                    <img src="images/Communications.png" alt="Communications" width="130">
+                    <h2>Communications</h2>
+                    <ul>
+                        <li>Copywriting</li>
+                        <li>Data Visualization</li>
+                        <li>Editing</li>
+                        <li>Proofreading</li>
+                        <li>Presentation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- My Work section coded using CSS grid -->
+        <section class="myWork">
+            <div class="workGrid">
+                <div class="narcolepsy hero" id="item1"> 
+                         <img src="images/Narcolepsy Network.png" alt="Narcolepsy Network Mockups" width="400">
+                </div>
+                <div class="narcolepsy text" id="item2">
+                        <h2>Narcolepsy Network</h2>
+                        <p>Enhancing the human connection of a member-driven nonprofit organization</p>
+                        <p>Learn More ➜</p>
+                </div>
+                <div class="trippi hero" id="item4">
+                        <img src="images/Trippi.png"alt="Trippi Wireframes" width="400">
+                </div>
+                <div class="trippi text" id="item3">
+                        <h2>Trippi</h2>
+                        <p>Imagining a personalized travel planning tool with a network of local advisors</p>
+                        <p>Learn More ➜</p>
+                </div>
+                <div class="closetLoop hero" id="item5">
+                        <img src="images/Closet Loop.png"alt="Closet Loop Logo and Icons" width="300">
+                </div>
+                <div class="closetLoop text" id="item6">
+                        <h2>Closet Loop</h2>
+                        <p>Promoting circular fashion with a mobile app that incentivizes clothing donation and upcycling</p>
+                        <p>Learn More ➜</p>      
+                </div>
+            </div>
+            <div class="projectButton">
+                <button type="button" id="allProjects">View all projects</button>
+            </div>
+        </section>
+        <!-- Footer Section -->
         <footer>
-            <ul id="footer">
-                <li>Latasha.Hudson2@gmail.com</li>
-                <li>Resume</li>
-                <li>LinkedIn</li>
-            </ul>
+            <div id="footerFlex">
+                <div class="footerItem">Latasha.Hudson2@gmail.com</div>
+                <div class="footerItem">Resume</div>
+                <div class="footerItem">LinkedIn</div>
+            </div>
             <p class="copyright">Copyright © 2021 Latasha Hudson. All Rights Reserved.</p>
         </footer>
     </body>

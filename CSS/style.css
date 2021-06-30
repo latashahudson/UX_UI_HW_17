@@ -3,17 +3,17 @@ body{
 }
 header{
     display: flex;
-}
-.inline-block{
-    display: inline-block;
-    vertical-align: top;
+    flex-direction: row;
+    /* outline: 1px solid red; */
 }
 
 .logo{
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 25%;
     padding: 75px;
+    /* outline: 1px solid red; */
 }
 
 .menu{
@@ -21,13 +21,18 @@ header{
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    width: 30%;
+    width: 33%;
     padding: 1%;
     margin-left: auto;
     font-family: 'Karla', sans-serif;
     font-size: 24px;
     font-weight:400;
     font-style: normal;
+    /* outline: 1px solid red; */
+}
+.menu span{
+    margin: 20px;
+    /* outline: 1px solid red; */
 }
 
 .logo h2{
@@ -35,16 +40,17 @@ header{
 }
 
 h1,h2,p,ul{
-    color: #3D3D3D
+    color: #3D3D3D;
 }
 
-ul{
-    margin-left: auto;
+.flexChild ul{
+    display: flex;
+    flex-direction: column;
     font-family: 'Karla', sans-serif;
     font-size: 24px;
     font-weight:400;
     font-style: normal;
-    list-style: none;
+    line-height: 40px;
 }
 
 h1{
@@ -61,39 +67,40 @@ h2{
 }
 
 p{
-    font-family: 'Karla', sans-serif;   
+    font-family: 'Karla', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .heroImg{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     height: 650px;
+    /* outline: 1px solid red; */
 }
 
-.image{
-    float:right;
-    width: 50%;
+.imageLatasha{
+    width: 700px;
     height: 600px;
-}
-.image img{
-    display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: center; 
+    /* outline: 1px solid red; */
+}
+.imageLatasha img{
+    display: flex;
     margin: 0 auto;
+    align-items: center;
+    justify-content: center;
     box-shadow:50px 50px #FAC4AA;
     border-radius: 10px;
 }
 
 .headline{
-    float:left;
-    width: 50%;
-    height: 600px;
+    width: 530px;
     text-align: left;
-    margin: 0 auto;
-}
-
-.headline h1{
-    padding-left: 170px;
-    padding-right: 48px;
-    padding-top: 100px;
+    /* outline: 1px solid red; */
 }
 
 button{
@@ -101,38 +108,135 @@ button{
     font-size: 24px;
     font-weight:500;
     font-style: normal;
-    color: #3d3d3d ;
-    background-color: #FAC4AA;
+    color: #ffffff;
+    background-color: #3d3d3d;
     border: none;
     border-radius: 10px;
     padding: 15px 32px;
     cursor: pointer;
-    margin-left: 170px;
     transition: background-color .5s ease-in-out;
 }
 
 button:hover{
-    background-color: #B2EEE6;
+    background-color:#FAC4AA;
+    color: #3d3d3d;
     box-shadow: 2px 2px 2px rgba(0,0,0,.5)
 }
 
+.projectButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 150px;
+    margin-top: 25px;
+    /* outline: 1px solid red; */
+}
+
+.flexContainer{
+    display: flex;
+    height: 600px;
+    margin: auto;
+    align-items: center;
+    justify-content: space-around;
+    /* outline: 1px solid red; */
+}
+
+.flexChild{
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    /* outline: 1px solid red; */
+}
+
+#item2{
+    grid-area: text1;
+}
+#item3{
+    grid-area: text2;
+}
+#item6{
+    grid-area: text3;
+}
+.workGrid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 450px 450px 450px;
+    grid-template-areas:
+        'image1 text1'
+        'text2 image2'
+        'image3 text3';
+    justify-content: center;
+    align-items: center;
+    margin: 0px 5%;
+    /* outline: 1px solid red; */
+}
+
+#item4 img{
+    padding-bottom: 25px;
+}
+#item1{
+    background-color: #3d3d3d;
+    grid-area: image1;
+}
+#item4{
+    background-color: #87B9B0;
+    grid-area: image2;
+}
+#item5{
+    background-color: #FAC4AA;
+    grid-area: image3;
+}
+#item5 img{
+    width: 70%;
+    margin: 15%;
+}
+
+.hero{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    width: 90%;
+    height: 80%; 
+    border-radius: 10px;
+    margin: 5%;
+    /* outline: 1px solid purple;  */
+}
+.hero img{
+    width: 70%;
+    margin: 15%;
+}
+.text{
+    display: grid;
+    align-content: top;
+    justify-content: center;
+    width: 90%;
+    height: 80%; 
+    margin: 5%;
+    /* outline: 1px solid red; */
+}
 footer{
-    background-color: #B2EEE6;
     padding: 30px;
 }
 
-#footer{
+#footerFlex{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 800px;
+    justify-content: space-around;
+    width: 60%;
     margin: auto;
     margin-bottom: 20px;
+    /* outline: 1px solid red; */
 }
-footer ul{
-    display: inline-block;
-    vertical-align: top;
-    list-style: none;
+.footerItem{
+    display: flex;
+    font-family: 'Karla', sans-serif;
+    font-size: 24px;
+    font-weight:400;
+    font-style: normal;
+    padding: 5% 0% 5% 0%;
+    /* outline: 1px solid red; */
 }
 
 .copyright{
@@ -142,4 +246,164 @@ footer ul{
     font-size: 18px;
     font-weight: 400;
     font-style: normal;
+    text-align: center;
+}
+@media screen and (max-width: 1100px){
+    h1{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    h2{
+        font-size: 24px;
+        font-weight:500;
+    }
+    p{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .logo{
+        padding: 50px;
+        margin-bottom: 25px;
+    }
+    .logo img{
+        width: 60px;
+    }
+    .menu{
+        display: none;
+    }
+    .heroImg{
+        height: 400px;
+    }
+    .flexChild ul{
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .imageLatasha img{
+        width: 300px;
+    }   
+    #footerFlex{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 15px;
+        /* outline: 1px solid red; */
+    }
+    .footerItem{
+        padding: 2% 0% 2% 0%;
+        /* outline: 1px solid red; */
+    }
+
+@media screen and (max-width: 768px){
+    h1{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    h2{
+        font-size: 24px;
+        font-weight:500;
+    }
+    p{
+        font-size: 18px;
+        line-height: 24px;
+    } 
+    .logo img{
+        width: 50px;
+    }
+  
+    .flexChild ul{
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .flexContainer{
+        flex-direction: column;
+        height: 1300px;
+        width: 80%;
+        margin: 10%;
+        /* outline: 1px solid pink; */
+    }
+    .flexChild{
+        width: 100%;
+        height: 400px;
+        /* outline: 1px solid orange; */
+    }
+    .projectButton{
+        margin-bottom: 100px;
+        /* outline: 1px solid red; */
+    }
+}
+@media screen and (max-width: 600px) {
+    .logo img{
+        width: 35px;
+    }
+    
+    .heroImg{
+        flex-direction: column-reverse;
+        height: 700px;
+    }   
+    .headline{
+        width: 345px;
+        text-align: center;
+        margin-bottom: 250px;
+    }
+    button{
+        font-size: 18px;
+    }
+    .imageLatasha{
+        width: 100%;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        /* outline: 1px solid purple; */
+    }
+    .imageLatasha img{
+        width: 250px;
+        margin-top: 150px;
+    }    
+    .flexContainer{
+        flex-direction: column;
+        height: 1300px;
+        width: 80%;
+        margin: 10%;
+        /* outline: 1px solid pink; */
+    }
+    .flexChild{
+        width: 100%;
+        height: 400px;
+        /* outline: 1px solid orange; */
+    }
+   .flexChild ul{
+        font-size: 18px;
+        line-height: 30px;
+    }
+    h1{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    h2{
+        font-size: 24px;
+        font-weight:500;
+    }
+    p{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .workGrid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 350px 350px 350px 350px 350px 350px;
+        grid-template-areas:
+            'image1' 
+            'text1'
+            'image2'
+            'text2'
+            'image3'
+            'text3';  
+            margin: 0;
+        /* outline: 1px solid purple; */
+    }
+    .footerItem{
+        font-size: 18px;
+    }
+    .copyright{
+        padding: 5%;
+        font-size: 12px;
+   }
+}
 }
